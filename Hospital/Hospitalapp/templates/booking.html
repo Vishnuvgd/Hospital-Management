@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'navbar.html' %}
+<h1 class="text-center">Make An Appoinment</h1>
+<hr>
+<form method="post" class="container p-3 w-50 bg-light border rounded my-2">{% csrf_token %}
+   <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Patient Name</label>
+    <input type="text" class="form-control" name="p_name" placeholder="Enter your name">
+   </div>
+   <div class="mb-3">
+    <label for="exampleFormControlInput2" class="form-label">Phone</label>
+    <input type="number" name="p_phone" class="form-control" placeholder="Phone">
+   </div>
+    <div class="mb-3">
+    <label for="exampleFormControlInput3" class="form-label">Email</label>
+    <input type="email" name="p_email" class="form-control" placeholder="Email">
+   </div>
+    <div class="mb-3">
+    <label for="exampleFormControlInput4" class="form-label">Doctor Name</label>
+    <input type="text" name="doc_name" class="form-control" placeholder="Dr">
+   </div>
+    <div class="mb-3">
+    <label for="exampleFormControlInput5" class="form-label">Booking Date</label>
+    <input type="date" name="booking_date" class="form-control">
+   </div>
+       <button class="btn btn-primary text-white" type="submit">submit</button>
+</form>
+</body>
+{% include 'infooter1.html' %}
+</html>
